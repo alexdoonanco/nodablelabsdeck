@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+}
+
+body.theme-dark {
+  @apply bg-[#0A0A0A] text-white;
+}
+
+body.theme-light {
+  @apply bg-gray-50 text-black;
+}
+
+.glass-card {
+  @apply backdrop-blur-lg rounded-lg p-6 transition-all duration-300;
+}
+
+.theme-dark .glass-card {
+  @apply bg-white/5 hover:bg-white/10;
+}
+
+.theme-light .glass-card {
+  @apply bg-black/5 hover:bg-black/10;
+}
+
+.theme-dark .text-theme-primary {
+  @apply text-white;
+}
+
+.theme-light .text-theme-primary {
+  @apply text-black;
+}
+
+.theme-dark .text-theme-secondary {
+  @apply text-gray-400;
+}
+
+.theme-light .text-theme-secondary {
+  @apply text-gray-600;
+}
+
+.theme-dark .text-theme-muted {
+  @apply text-gray-400;
+}
+
+.theme-light .text-theme-muted {
+  @apply text-gray-500;
+}
